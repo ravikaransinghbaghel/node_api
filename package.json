@@ -1,0 +1,25 @@
+{
+  "name": "node_api",
+  "version": "1.0.0",
+  "description": "hii ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "NODE_API"
+  },
+  "keywords": [
+    "ravi",
+    "karan"
+  ],
+  "author": "RAVI KARAN",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
