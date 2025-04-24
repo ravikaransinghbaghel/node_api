@@ -10,20 +10,19 @@ dotenv.config()
 connect();
 
 const app = express()
-const port = process.env.Port || 8000
+const port = process.env.PORT || 8000
 
-
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 app.use(express.json())
-app.use('./upload', express.static('upload'));
+app.use('/upload', express.static('upload'))  // ✅ fixed path
 
 app.use('/api', braRoute)
 app.use('/api', stuRouting)
-app.use('/api', staffRouting);
+app.use('/api', staffRouting)
 
-app.get('/',(req,rep)=>{
-rep.send("HABIBY! welcome to MMIT Aliagrh")
+app.get('/', (req, res) => {
+  res.send("HABIBY! Welcome to MMIT Aligarh")
 })
 
 app.listen(port, () => {
