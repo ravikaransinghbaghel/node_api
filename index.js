@@ -22,6 +22,9 @@ app.use('/api', braRoute)
 app.use('/api', stuRouting)
 app.use('/api', staffRouting);
 
+app.get('/',(req,rep)=>{
+rep.send("HABIBY! welcome to MMIT Aliagrh")
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
