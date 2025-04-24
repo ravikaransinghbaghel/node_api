@@ -15,8 +15,9 @@ export const postStudent = async (req, resp) => {
             name, address, mob_no, addmi_year, enrollment,
             branch: branchId,
             stu_img: req.file.filename,
-            stu_img_path: req.file.path
+            stu_img_path: req.file.path.replace(/\\/g, '/')
         })
+        console.log(req.file);
 
         return resp.status(200).
             json({
