@@ -13,7 +13,9 @@ const app = express()
 const port = process.env.PORT || 8000
 
 app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors({
+   origin: 'http://127.0.0.1:5500'
+}))
 app.use(express.json())
 app.use('/upload', express.static('upload'))  // ✅ fixed path
 
