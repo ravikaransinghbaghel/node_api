@@ -5,10 +5,10 @@ const branchScheema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    bra_img: {
-        type: String,
-        required: true
-    },
+    // bra_img: {
+    //     type: String,
+    //     required: true
+    // },
     branch_name: {
         type: String,
         required: true

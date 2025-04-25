@@ -2,9 +2,9 @@ import branch from '../Scheema/branch.js'
 
 export const postBranch = async (req, res) => {
   try {
-    const { branch_code, branch_name, desc,bra_img } = req.body;
+    const { branch_code, branch_name, desc, } = req.body;
 
-    if (!branch_code || !branch_name || !bra_img) {
+    if (!branch_code || !branch_name ) {
       return res.status(400).json({ message: "Please fill in all required fields." });
     }
 
