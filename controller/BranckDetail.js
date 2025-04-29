@@ -8,7 +8,10 @@ export const postBranch = async (req, res) => {
       return res.status(400).json({ message: "Please fill in all required fields." });
     }
 
-    const addbranch = await branch.create({ branch_code, branch_name, desc ,bra_img});
+    const addbranch = await branch.create({ branch_code, branch_name, desc,
+      branch_img: req.file.filename,
+      branch_img_path: req.file.path.replace(/\\/g, '/')
+    });
 
     return res.status(200).json({
       success: true,

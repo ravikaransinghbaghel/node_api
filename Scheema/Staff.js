@@ -9,6 +9,10 @@ const staffScheema = new mongoose.Schema({
         type: String,
         required: true
     },
+    staff_img_path:{
+        type: String,
+        required: true
+    },
     post_name: {
         type: String,
         required: true

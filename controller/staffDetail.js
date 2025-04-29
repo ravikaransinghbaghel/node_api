@@ -2,10 +2,10 @@ import staffScheema from '../Scheema/Staff.js'
 
 export const postStaff = async (req, resp) => {
     try {
-        const { name, post_name, staff_img } = req.body;
+        const { name, post_name } = req.body;
         const { branchId } = req.params;
 
-        if (!name || !post_name || !staff_img) {
+        if (!name || !post_name ) {
             return resp.status(420).json({ message: "please fill the require field !! " });
         }
         if (!branchId) {
@@ -15,8 +15,9 @@ export const postStaff = async (req, resp) => {
         const addStaff = await staffScheema.create({
             name,
             post_name,
-            staff_img,
             relative_branch: branchId,
+            staff_img: req.file.filename,
+            staff_img_path: req.file.path.replace(/\\/g, '/')
         })
 
         return resp.status(200).

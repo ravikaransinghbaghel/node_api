@@ -17,7 +17,7 @@ export const postStudent = async (req, resp) => {
             stu_img: req.file.filename,
             stu_img_path: req.file.path.replace(/\\/g, '/')
         })
-        console.log(req.file);
+        // console.log(req.file);
 
         return resp.status(200).
             json({
