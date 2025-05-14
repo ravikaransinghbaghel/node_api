@@ -2,9 +2,9 @@ import student from '../Scheema/student.js';
 
 export const postStudent = async (req, resp) => {
     try {
-        const { name, address, mob_no, addmi_year, enrollment } = req.body;
+        const { name, address, addmi_year, enrollment } = req.body;
         const { branchId } = req.params;
-        if (!name || !address || !mob_no || !addmi_year || !enrollment) {
+        if (!name || !address  || !addmi_year || !enrollment) {
             return resp.status(420).json({ message: "please fill the require field !! " });
         }
         if (!branchId) {
