@@ -8,4 +8,4 @@ export const stuRouting = express.Router();
 
 // stuRouting.post('/stu/:branchId',stu_upload.single('image'),postStudent);
 stuRouting.post('/stu/:branchId',postStudent);
-stuRouting.get('/stu/',getStudent);
+stuRouting.get('/stu',getStudent);
