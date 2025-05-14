@@ -12,10 +12,10 @@ export const postStudent = async (req, resp) => {
         }
 
         const addStudent = await student.create({
-            name, address, mob_no, addmi_year, enrollment,
+            name, address, addmi_year, enrollment,
             branch: branchId,
-            stu_img: req.file.filename,
-            stu_img_path: req.file.path.replace(/\\/g, '/')
+            // stu_img: req.file.filename,
+            // stu_img_path: req.file.path.replace(/\\/g, '/')
         })
         // console.log(req.file);
 
