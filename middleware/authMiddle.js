@@ -13,6 +13,7 @@ export const isAuthanication = (req, res, next) => {
 
         const verified = jwt.verify(bearerToken, process.env.JWT_SECRET);
         req.user = verified;
+        console.log(req.user);
 
         next();
     } catch (error) {

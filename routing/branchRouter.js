@@ -6,6 +6,6 @@ import { adminAuthanication } from '../middleware/adminMiddle.js';
 
 export const braRoute = express.Router();
 
-// braRoute.post('/branch',bra_upload.single('image'),postBranch);
-braRoute.post('/branch',isAuthanication,adminAuthanication,postBranch);
+braRoute.post('/branch',postBranch);
+// braRoute.post('/branch',isAuthanication,adminAuthanication,postBranch);
 braRoute.get('/branch',getBranches);
