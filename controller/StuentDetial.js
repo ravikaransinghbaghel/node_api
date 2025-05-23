@@ -14,10 +14,10 @@ export const postStudent = async (req, resp) => {
         const addStudent = await student.create({
             name, address, addmi_year, enrollment,
             branch: branchId,
-            // stu_img: req.file.filename,
-            // stu_img_path: req.file.path.replace(/\\/g, '/')
+            stu_img: req.file.filename,
+            stu_img_path: req.file.path.replace(/\\/g, '/')
         })
-        // console.log(req.file);
+        console.log(req.file);
 
         return resp.status(200).
             json({
